@@ -1,0 +1,162 @@
+@use "design-system" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// background
+.bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: $cream;
+}
+
+// main content
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 $spacing-150;
+}
+
+// card component
+.card {
+  margin: 0 auto;
+  display: flex;
+  max-width: 600px;
+  border-radius: $spacing-150;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 50%;
+  margin: 0;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.card__content {
+  width: 50%;
+  padding: $spacing-400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $white;
+}
+
+.card__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card__category {
+  @include text-preset-1();
+  text-transform: uppercase;
+}
+
+.card__title {
+  margin: 0;
+  @include text-preset-2();
+}
+
+.card__description {
+  margin: 0;
+  @include text-preset-3();
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  gap: $spacing-250;
+}
+
+.price__current {
+  @include text-preset-4();
+}
+
+.price__previous {
+  @include text-preset-3();
+  font-size: 0.9rem;
+  text-decoration: line-through;
+}
+
+.card__btn {
+  @include text-preset-6();
+  padding: $spacing-200;
+  background-color: $green-500;
+  border: none;
+  border-radius: $spacing-100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-150;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(60, 128, 103, 0.75);
+  }
+
+  &:active {
+    background-color: $green-700;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green-700;
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: $spacing-350 $spacing-200;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card__image {
+    width: 100%;
+
+    img {
+      object-fit: cover;
+      max-height: 240px;
+    }
+  }
+
+  .card__content {
+    width: 100%;
+    padding: $spacing-300;
+    gap: $spacing-150;
+    min-height: 371px;
+    justify-content: space-between;
+  }
+
+  .card__heading {
+    gap: 12px;
+  }
+}
+
+// started files default styles
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

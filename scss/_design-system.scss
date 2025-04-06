@@ -1,0 +1,82 @@
+/* COLORS */
+// primary
+$green-500: hsl(158, 36%, 37%);
+$green-700: hsl(158, 42%, 18%);
+
+// neutral
+$black: hsl(212, 21%, 14%);
+$grey: hsl(228, 12%, 48%);
+$cream: hsl(30, 38%, 92%);
+$white: hsl(0, 0%, 100%);
+
+/* TYPOGRAPHY */
+// fonts Fraunces + Montserrat
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+// Font size (paragraph)
+:root {
+  font-size: 14px;
+}
+
+// text presets
+@mixin text-preset-1() {
+  font-family: "Montserrat";
+  font-size: 0.86rem;
+  line-height: 130%;
+  letter-spacing: 5px;
+  font-weight: 500;
+  color: $grey;
+}
+
+@mixin text-preset-2() {
+  font-family: "Fraunces";
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  font-weight: 700;
+  color: $black;
+}
+
+@mixin text-preset-3() {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  line-height: 160%;
+  font-weight: 500;
+  color: $grey;
+}
+
+@mixin text-preset-4() {
+  font-family: "Fraunces";
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: 0px;
+  font-weight: 700;
+  color: $green-500;
+}
+
+@mixin text-preset-5() {
+  font-family: "Fraunces";
+  font-size: 8px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  font-weight: 700;
+  color: $black;
+}
+
+@mixin text-preset-6() {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  line-height: 100%;
+  font-weight: 700;
+  color: $white;
+}
+
+// spacings
+// $spacing-500: 40px;
+$spacing-400: 32px;
+$spacing-350: 28px;
+$spacing-300: 24px;
+$spacing-250: 20px;
+$spacing-200: 16px;
+$spacing-150: 12px;
+$spacing-100: 8px;
